@@ -1,0 +1,21 @@
+rules =["paper", "rock", "scissors"]
+win1 = [("paper","rock"), ("rock","scissors"), ("scissors","paper")]
+win2 = [("rock","paper"), ("scissors","rock"), ("paper","scissors")]
+draw = [("paper","paper"), ("rock","rock"), ("scissors","scissors")]
+
+while True:
+  playerA = input ("A paper, rock, scissors")
+  while (playerA not in rules):
+    playerA = input ("A. choose from: paper, rock, scissors")
+  
+  playerB = input ("B paper, rock, scissors")
+  while (playerB not in rules):
+    playerB = input ("B. choose from: paper, rock, scissors")
+
+  print "A ", playerA,  " vs. B " ,playerB 
+  if ((playerA,playerB) in win1):
+    print("A wins")
+  if ((playerA,playerB) in win2):
+    print("B wins")
+  if ((playerA,playerB) in draw):
+    print ("draw")
