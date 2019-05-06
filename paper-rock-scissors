@@ -1,0 +1,14 @@
+win1 = [("paper","rock"), ("rock","scissors"), ("scissors","paper")]
+win2 = [("rock","paper"), ("scissors","rock"), ("paper","scissors")]
+draw = [("paper","paper"), ("rock","rock"), ("scissors","scissors")]
+
+while True:
+  playerA = input ("A paper, rock, scissors")
+  playerB = input ("B paper, rock, scissors")
+  
+  if ((playerA,playerB) in win1):
+    print("PA wins")
+  if ((playerA,playerB) in win2):
+    print("B wins")
+  else:
+    print ("draw")
